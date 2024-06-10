@@ -1,0 +1,39 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".image-container").hover(function() {
+                $(".image-container").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+
+    <!-- Ajoutez votre code JavaScript ici -->
+    <script>
+        const imageGrid = document.querySelector('.image-grid');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        imageGrid.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - imageGrid.offsetLeft;
+            scrollLeft = imageGrid.scrollLeft;
+        });
+
+        imageGrid.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+
+        imageGrid.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+
+        imageGrid.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - imageGrid.offsetLeft;
+            const walk = (x - startX) * 3; // Ajustez le coefficient de vitesse de défilement selon vos préférences
+            imageGrid.scrollLeft = scrollLeft - walk;
+        });
+    </script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - ADN Consulting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0074a2;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #0074a2;
+            transform: scale(1.1);
+        }
+        .blog {
+            padding: 40px;
+            background-color: #ffffff;
+        }
+        .blog-post {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+        .blog-post h2 {
+            margin-top: 0;
+        }
+        .blog-post img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ADN Consulting</div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="index.html#about">À propos</a>
+            <a href="index.html#packages">Packages</a>
+            <a href="index.html#gallery">Galerie</a>
+            <a href="index.html#pricing">Tarifs</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#chat">Chat en ligne</a>
+            <a href="index.html#form">Formulaire en ligne</a>
+            <a href="blog.html">Espace blog</a>
+        </nav>
+    </header>
+    <main class="blog">
+        <article class="blog-post">
+            <h2>Article 1</h2>
+            <img src="image_article1.jpg" alt="Image de l'article 1">
+            <p>Ceci est le contenu de l'article 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article class="blog-post">
+            <h2>Article 2</h2>
+            <img src="image_article2.jpg" alt="Image de l'article 2">
+            <p>Ceci est le contenu de l'article 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <!-- Ajoutez d'autres articles ici -->
+    </main>
+    <footer>
+        <p>&copy; 2024 ADN Consulting. Tous droits réservés.</p>
+    </footer>
+    <script>
+        // Ajouter une animation CSS au survol des liens de navigation
+        const navLinks = document.querySelectorAll("nav a");
+        navLinks.forEach(link => {
+            link.addEventListener("mouseenter", () => {
+                link.style.transform = "scale(1.1)";
+            });
+            link.addEventListener("mouseleave", () => {
+                link.style.transform = "scale(1)";
+            });
+        });
+    </script>
+</body>
+</html>

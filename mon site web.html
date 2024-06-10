@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADN Consulting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #0074a2;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff6347;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 40px;
+            background-color: #f0f0f0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .hero-text {
+            max-width: 50%;
+        }
+        .hero-text h1 {
+            font-size: 48px;
+            color: #ff6347;
+            margin: 0;
+        }
+        .hero-text p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .hero-text a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0074a2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .hero-text a:hover {
+            background-color: #005f87;
+        }
+        .hero-image {
+            max-width: 50%;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 20px;
+            background-color: #ffffff;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .service {
+            text-align: center;
+            max-width: 30%;
+            background-color: #0074a2;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .service:hover {
+            transform: translateY(-10px);
+        }
+        .service h3 {
+            font-size: 24px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .service p {
+            font-size: 16px;
+        }
+        .contact-form {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+        .contact-form h2 {
+            text-align: center;
+            color: #333;
+        }
+        .contact-form form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-form label {
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #0074a2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #005f87;
+        }
+        .gallery {
+            padding: 
+60px 20px;
+            background-color: #f5f5f5;
+        }
+        .gallery h2 {
+            text-align: center;
+            color: #333;
+        }
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+        .gallery-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-container img:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0074a2;
+            color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\an15668\Downloads\me.png" alt="ADN Consulting Logo" width="150">
+        </div>
+        <nav>
+            <a href="#home">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#packages">Packages</a>
+            <a href="#gallery">Galerie</a>
+            <a href="#pricing">Tarifs</a>
+            <a href="#contact">Contact</a>
+            <a href="#chat">Chat en ligne</a>
+            <a href="#form">Formulaire en ligne</a>
+            <a href="blog.html">Espace blog</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1>Bienvenue sur mon portfolio !</h1>
+                <p>"Le chemin de la connaissance est pavé de multiples expériences, chacune apportant son lot d'apprentissages et de découvertes. Tout comme un portfolio est le reflet d'un parcours, notre vie est une série d'œuvres en constante évolution, 
+				chaque page racontant une histoire unique de croissance, de persévérance et de transformation."</p>
+                <a href="#learn-more">En savoir plus</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" alt="Hero Image">
+            </div>
+        </section>
+        <section id="about" class="hero">
+            <div class="hero-text">
+                <h1>À propos de moi</h1>
+                <p>Je suis Alain Duhamel, un étudiant passionné par l'ingénierie et les systèmes numériques. Actuellement en 5ème année de cycle d'ingénieur en Génie Energétique à UniLaSalle Amiens, mon parcours académique est spécialisé en Production Automatisée et Usine Connectée. Mon intérêt pour l'optimisation des processus de production m'a conduit à rechercher des opportunités dans ce domaine. Je suis rigoureux, polyvalent et toujours enthousiaste à l'idée de relever de nouveaux défis.
+				Ma philosophie : apprendre en permanence et contribuer positivement à chaque projet que j'entreprends.</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/400" alt="About Image">
+            </div>
+        </section>
+       <section id="packages" class="services">
+    <div class="service">
+        <h3>Expérience Professionnelle 1</h3>
+        <div class="experience">
+            <p><strong>Support Qualité/ AGCO Beauvais France</strong> (Mars 2024 - Juin 2024)</p>
+            <ul>
+                <li>Mise à jour et standardisation des processus de traitement des non-conformités pièces.</li>
+                <li>Réduction des temps de traitement des non-conformités pour améliorer la productivité.</li>
+                <li>Identification des causes racines des non-conformités et mise en place d'actions correctives préventives.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="service">
+        <h3>Expérience Professionnelle 2</h3>
+        <div class="experience">
+            <p><strong>Support Production/ FIVES ECL Ronchin France</strong> (Mars 2023 - Septembre 2023)</p>
+            <ul>
+                <li>Mise en place de la planification fine en mécano soudure.</li>
+                <li>Formation des futurs utilisateurs du planning.</li>
+                <li>Support aux démarches d'amélioration continue et réalisation des envois et retours des pièces pour traitement.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="service">
+        <h3>Expérience Professionnelle 3</h3>
+        <div class="experience">
+            <h4>Employé Polyvalent en Restauration/ IZAKAYA Amiens France</h4>
+            <p class="date">(Juillet 2022 - Septembre 2022)</p>
+            <ul>
+                <li>Accueil des clients, commis de cuisine, service en salle et entretien de la salle.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+        <section id="gallery" class="gallery">
+            <h2>Galerie</h2>
+            <div class="gallery-container">
+                <a data-fancybox="gallery" href="https://pcgeant.com/wp-content/uploads/2019/11/pcgeant.png">
+                    <img src="https://pcgeant.com/wp-content/uploads/2019/11/pcgeant.png" alt="Image 1">
+                </a>
+                <a data-fancybox="gallery" href="https://www.pcspecialist.fr/images/landing/pcs/gaming-pc/gaming_pc_headline_pcs.jpg">
+                    <img src="https://www.pcspecialist.fr/images/landing/pcs/gaming-pc/gaming_pc_headline_pcs.jpg" alt="Image 2">
+                </a>
+                <a data-fancybox="gallery" href="https://apibackend.megapc.tn/uploads/gallerie/1651848862522.webp">
+                    <img src="https://apibackend.megapc.tn/uploads/gallerie/1651848862522.webp" alt="Image 3">
+                </a>
+                <!-- Ajoutez d'autres images de la même manière -->
+            </div>
+        </section>
+        <section id="form" class="contact-form">
+            <h2>Formulaire en ligne</h2>
+            <form action="https://formspree.io/f/xvoeeojr" method="POST">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 ADN Consulting. Tous droits réservés.</p>
+   
+</footer>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6666ba7b981b6c56477b7b5b/1i00kgt91';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</body>
+</html>
